@@ -20,9 +20,9 @@ After some debugging I have found the root cause and fixed it.
 
 mkdir -p /mnt/data/ntopng/redis
 mkdir -p /mnt/data/ntopng/lib
-curl -Lo /mnt/data/ntopng/GeoIP.conf x/data/ntopng/GeoIP.conf
-curl -Lo /mnt/data/ntopng/ntopng.conf x/data/ntopng/ntopng.conf
-curl -Lo /mnt/data/ntopng/redis.conf x/data/ntopng/redis.conf
+curl -Lo /mnt/data/ntopng/GeoIP.conf https://raw.githubusercontent.com/TheLinuxGuy/openwrt-ntopng/main/container-config/GeoIP.conf
+curl -Lo /mnt/data/ntopng/ntopng.conf https://raw.githubusercontent.com/TheLinuxGuy/openwrt-ntopng/main/container-config/ntopng.conf
+curl -Lo /mnt/data/ntopng/redis.conf https://raw.githubusercontent.com/TheLinuxGuy/openwrt-ntopng/main/container-config/redis.conf
 ```
 
 #### Running container
