@@ -9,6 +9,6 @@ fi
 cd "$ROOTDIR/build"
 
 cd openwrt
-cp $ROOTDIR/seed/ao-mini.seed .config
+cp $ROOTDIR/img/seed/ao-mini.seed .config
 make defconfig
 cp .config  ao-mini.config
