@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 # Lisence: MIT
 
-name: NanoPi R2S 21.02
+name: NanoPi R4S 21.02
 
 on:
 #  release:
