@@ -1,6 +1,7 @@
 # openwrt-ntopng
 OpenWRT + ntopng support on a pocket router nanopi R4S
 
+NanoPi R4S is not yet officially supported in OpenWRT official builds (only in snapshots code base) this requires you to build your own OpenWRT build or use FriendlyWRT image which I found to be missing critical items like IPv6 NAT6 kernel modules and its also an older openwrt release.
 
 ### Goals
 
