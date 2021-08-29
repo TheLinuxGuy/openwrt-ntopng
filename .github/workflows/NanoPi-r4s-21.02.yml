@@ -195,7 +195,7 @@ jobs:
         with:
           name: OpenWrt 21.02 ${{ env.RELDATE }} 
           allowUpdates: true
-          tag: r2s-21.02-${{ env.RELDATE }}
+          tag: r4s-21.02-${{ env.RELDATE }}
           commit: main
           replacesArtifacts: true
           token: ${{ secrets.GITHUB_TOKEN }}
