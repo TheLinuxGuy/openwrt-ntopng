@@ -29,17 +29,17 @@ After some debugging I have found the root cause and fixed it.
 
 ```
 
-mkdir -p /opt/docker/ntopng/redis
-mkdir -p /opt/docker/ntopng/lib
-curl -Lo /opt/docker/ntopng/GeoIP.conf https://raw.githubusercontent.com/TheLinuxGuy/openwrt-ntopng/main/container-config/GeoIP.conf
-curl -Lo /opt/docker/ntopng/ntopng.conf https://raw.githubusercontent.com/TheLinuxGuy/openwrt-ntopng/main/container-config/ntopng.conf
-curl -Lo /opt/docker/ntopng/redis.conf https://raw.githubusercontent.com/TheLinuxGuy/openwrt-ntopng/main/container-config/redis.conf
+mkdir -p /opt/ntopng/redis
+mkdir -p /opt/ntopng/lib
+curl -Lo /opt/ntopng/GeoIP.conf https://raw.githubusercontent.com/TheLinuxGuy/openwrt-ntopng/main/container-config/GeoIP.conf
+curl -Lo /opt/ntopng/ntopng.conf https://raw.githubusercontent.com/TheLinuxGuy/openwrt-ntopng/main/container-config/ntopng.conf
+curl -Lo /opt/ntopng/redis.conf https://raw.githubusercontent.com/TheLinuxGuy/openwrt-ntopng/main/container-config/redis.conf
 ```
 
 #### Running container
 
 ```
 
-docker run --net=host --privileged --restart always --name ntopng -v /opt/docker/ntopng/GeoIP.conf:/etc/GeoIP.conf -v /opt/docker/ntopng/ntopng.conf:/etc/ntopng/ntopng.conf -v /opt/docker/ntopng/redis.conf:/etc/redis/redis.conf -v /opt/docker/ntopng/lib:/var/lib/ntopng -v /opt/docker/ntopng/redis:/var/lib/redis dlk3/ntopng-udm:latest
+docker run --net=host --privileged --restart always --name ntopng -v /opt/ntopng/GeoIP.conf:/etc/GeoIP.conf -v /opt/ntopng/ntopng.conf:/etc/ntopng/ntopng.conf -v /opt/ntopng/redis.conf:/etc/redis/redis.conf -v /opt/ntopng/lib:/var/lib/ntopng -v /opt/ntopng/redis:/var/lib/redis dlk3/ntopng-udm:latest
 
 ```
