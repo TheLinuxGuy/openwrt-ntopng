@@ -25,6 +25,10 @@ There is an arm64 image that we can run on NanoPi R4S - this works fine in frien
 
 After some debugging I have found the root cause and fixed it.
 
+#### A note about /opt/docker folder
+
+You may want to create a separate partition to avoid "/" filling up or crashing openwrt. After you have created a partition and new folder, say "/data" and its automount works every reboot of openwrt then modify the configuration in /etc/config/dockerd specifically `option data_root` path to the new /data/dockerd folder.
+
 #### ntopng install on openwrt 21.02 as a container with host access
 
 ```
